@@ -1,11 +1,10 @@
-import pandas as pd
+#import pandas as pd
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 chrome_options = Options()
 chrome_options.add_argument("--headless")
-
 
 def cod_concorrentes(ean_produto):
     try:
@@ -80,3 +79,6 @@ def cod_concorrentes(ean_produto):
         print('Produto não encontrado!')
 
     return codigo_panvel, codigo_raia, codigo_pp, codigo_paguemenos
+
+
+cod_concorrentes(7891268044171)

@@ -3,9 +3,11 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 import os
+from functions import cod_concorrentes
 
 app = Tk()
 
+"""
 def produto_pp(ean_medicamento):
     try:
         driver = webdriver.Chrome()
@@ -15,18 +17,18 @@ def produto_pp(ean_medicamento):
         driver.find_element_by_class_name("product-item__img__default").click()
         preco_pp = driver.find_element_by_class_name("skuBestPrice")
         preco_pp = preco_pp.text
-        driver.quit()
+        driver.quit() 
         return preco_pp
     except:
         driver.quit()
         preco_pp = "Nenhum produto encontrado!"
         return preco_pp
-
+"""
 
 def priceAnalyser():
-    preco_pp = produto_pp(ean_entry.get())
-    print(f'{preco_pp}')
-    return preco_pp
+    cod_ = cod_concorrentes(ean_entry.get())
+    print(f'{cod_concorrentes}')
+    return cod_concorrentes
 
 
 app.title("Comparador de Preços")
